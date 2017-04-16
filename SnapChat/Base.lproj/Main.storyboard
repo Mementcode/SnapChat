@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="SnapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SnapChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af2-Jw-8dm">
+                                <rect key="frame" x="47.5" y="40" width="281" height="78"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-gz-os3">
+                                <rect key="frame" x="88" y="178" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Bkb-aU-68G"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zms-8U-ArM">
+                                <rect key="frame" x="88" y="258" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dxJ-PT-kuv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJR-ev-jbS">
+                                <rect key="frame" x="164" y="338" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ig5-6x-2Em"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gJR-ev-jbS" firstAttribute="top" secondItem="zms-8U-ArM" secondAttribute="bottom" constant="50" id="3hn-b1-6BF"/>
+                            <constraint firstItem="iG0-gz-os3" firstAttribute="top" secondItem="af2-Jw-8dm" secondAttribute="bottom" constant="60" id="44K-VT-iAJ"/>
+                            <constraint firstItem="iG0-gz-os3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6W4-IM-TBD"/>
+                            <constraint firstItem="zms-8U-ArM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E09-Sz-mFq"/>
+                            <constraint firstItem="iG0-gz-os3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Elf-vj-gCI"/>
+                            <constraint firstItem="zms-8U-ArM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRV-y0-MmG"/>
+                            <constraint firstItem="af2-Jw-8dm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="RTN-Sz-927"/>
+                            <constraint firstItem="af2-Jw-8dm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="THg-AI-e3M"/>
+                            <constraint firstItem="iG0-gz-os3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cW2-Aj-sVn"/>
+                            <constraint firstItem="zms-8U-ArM" firstAttribute="top" secondItem="iG0-gz-os3" secondAttribute="bottom" constant="50" id="jlQ-XA-L0T"/>
+                            <constraint firstItem="gJR-ev-jbS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lct-hD-P9Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="iG0-gz-os3" id="C1g-do-Ycw"/>
+                        <outlet property="passwordTextField" destination="zms-8U-ArM" id="JQm-nJ-BNG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="93.103448275862078"/>
         </scene>
     </scenes>
 </document>
