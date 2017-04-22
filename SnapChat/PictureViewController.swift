@@ -21,6 +21,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
      var imagePicker = UIImagePickerController()
     
+    var uuid = NSUUID().uuidString
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,7 +64,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // uploads imageData to the folder "image" on fire base and returns any errors, if there are no errors then the segue is moved to the "selectUserSegue"
         // adds the NSUUID name with a .jpg at the end
         
-        imagesFolder.child("\(String(describing: NSUUID().uuidString)).jpg").put(imageData, metadata: nil, completion: {( metadata, error) in
+        imagesFolder.child("\(String(describing: uuid)).jpg").put(imageData, metadata: nil, completion: {( metadata, error) in
             print("We tried to Upload")
             
             if error != nil {
@@ -83,7 +85,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         nextVC.imageURL = sender as! String
         nextVC.descrip = messageTextField.text!
-        
+        nextVC.uuid = uuid
  
     }
 }
