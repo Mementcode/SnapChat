@@ -34,6 +34,7 @@ class ViewSnapViewController: UIViewController {
         
         FIRStorage.storage().reference().child("image").child("\(String(describing: snap.uuid)).jpg").delete { (error) in
             print("We deleted the pic")
+            
         }
     }
     

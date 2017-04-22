@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="callum.brennan@hotmail.co.uk" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-gz-os3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-gz-os3">
                                 <rect key="frame" x="88" y="178" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Bkb-aU-68G"/>
@@ -37,8 +37,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="purple" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zms-8U-ArM">
-                                <rect key="frame" x="88" y="258" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zms-8U-ArM">
+                                <rect key="frame" x="88" y="238" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="dxJ-PT-kuv"/>
                                 </constraints>
@@ -47,29 +47,50 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJR-ev-jbS">
-                                <rect key="frame" x="164" y="338" width="47" height="30"/>
+                                <rect key="frame" x="164" y="308" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ig5-6x-2Em"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syh-UG-m5U">
+                                <rect key="frame" x="21" y="278" width="333" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Either sign in or create an account by entering your details below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-rO-TOR">
+                                <rect key="frame" x="10" y="126" width="355" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gJR-ev-jbS" firstAttribute="top" secondItem="zms-8U-ArM" secondAttribute="bottom" constant="50" id="3hn-b1-6BF"/>
+                            <constraint firstAttribute="trailing" secondItem="H8R-rO-TOR" secondAttribute="trailing" constant="10" id="1Qe-CF-lhp"/>
                             <constraint firstItem="iG0-gz-os3" firstAttribute="top" secondItem="af2-Jw-8dm" secondAttribute="bottom" constant="60" id="44K-VT-iAJ"/>
                             <constraint firstItem="iG0-gz-os3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6W4-IM-TBD"/>
                             <constraint firstItem="zms-8U-ArM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E09-Sz-mFq"/>
                             <constraint firstItem="iG0-gz-os3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Elf-vj-gCI"/>
+                            <constraint firstItem="Syh-UG-m5U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="JOB-UM-gtB"/>
+                            <constraint firstItem="Syh-UG-m5U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jfn-Oc-hhX"/>
+                            <constraint firstItem="H8R-rO-TOR" firstAttribute="top" secondItem="af2-Jw-8dm" secondAttribute="bottom" constant="8" id="Jn5-wL-cXi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Syh-UG-m5U" secondAttribute="trailing" constant="5" id="MDd-l7-PNS"/>
                             <constraint firstItem="zms-8U-ArM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRV-y0-MmG"/>
                             <constraint firstItem="af2-Jw-8dm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="RTN-Sz-927"/>
                             <constraint firstItem="af2-Jw-8dm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="THg-AI-e3M"/>
                             <constraint firstItem="iG0-gz-os3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cW2-Aj-sVn"/>
-                            <constraint firstItem="zms-8U-ArM" firstAttribute="top" secondItem="iG0-gz-os3" secondAttribute="bottom" constant="50" id="jlQ-XA-L0T"/>
+                            <constraint firstItem="H8R-rO-TOR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="g7y-F8-YcI"/>
+                            <constraint firstItem="H8R-rO-TOR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDN-sl-yfi"/>
+                            <constraint firstItem="zms-8U-ArM" firstAttribute="top" secondItem="iG0-gz-os3" secondAttribute="bottom" constant="30" id="jlQ-XA-L0T"/>
                             <constraint firstItem="gJR-ev-jbS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lct-hD-P9Z"/>
+                            <constraint firstItem="gJR-ev-jbS" firstAttribute="top" secondItem="Syh-UG-m5U" secondAttribute="bottom" constant="30" id="ldp-Hm-P9R"/>
+                            <constraint firstItem="Syh-UG-m5U" firstAttribute="top" secondItem="zms-8U-ArM" secondAttribute="bottom" constant="10" id="mzW-qR-fyC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ErrorTextField" destination="Syh-UG-m5U" id="9Wt-Mw-vmi"/>
                         <outlet property="emailTextField" destination="iG0-gz-os3" id="C1g-do-Ycw"/>
                         <outlet property="passwordTextField" destination="zms-8U-ArM" id="JQm-nJ-BNG"/>
                         <segue destination="VTm-ei-6W3" kind="presentation" identifier="signInSegue" id="yS8-HW-dhB"/>

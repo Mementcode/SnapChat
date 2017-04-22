@@ -14,13 +14,17 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var ErrorTextField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
     }
     
     @IBAction func signInTapped(_ sender: Any) {
+        
+        
         
         FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             
@@ -35,6 +39,9 @@ class SignInViewController: UIViewController {
                     if error != nil{
                         
                         print("we have an error:\(String(describing: error))")
+                        
+                        self.ErrorTextField.text = "There was an error signing you in, make sure you have the correct password"
+                        
                     } else {
                         print("Created user Succesfully")
                         
