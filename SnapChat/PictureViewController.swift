@@ -27,6 +27,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
 
        imagePicker.delegate = self  // INCLUDE ME!
+        nextButton.isEnabled = false
 
     }
     
@@ -36,13 +37,14 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         imageView.image = image
         
         imageView.backgroundColor = UIColor.clear
+        nextButton.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
         
     }
 
     @IBAction func CameraTapped(_ sender: Any) {
         
-        imagePicker.sourceType = .savedPhotosAlbum // recives images from photo album
+        imagePicker.sourceType = .camera// recives images from camera
         imagePicker.allowsEditing = false // doesnt allow editing in app
         
       present(imagePicker, animated: true, completion: nil)

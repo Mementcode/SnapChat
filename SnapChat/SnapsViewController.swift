@@ -56,15 +56,30 @@ class SnapsViewController: UIViewController, UITableViewDelegate , UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return snaps.count
+        
+        
+        if snaps.count == 0 {
+            return 1
+            
+        } else {
+                return snaps.count
+            }
+            
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        if snaps.count == 0 {
+            cell.textLabel?.text = "You have no snaps 😦"
+        } else {
+            
+    
         let snap = snaps[indexPath.row]
         
         cell.textLabel?.text = snap.from
+        }
         
         return cell
     }
@@ -76,14 +91,12 @@ class SnapsViewController: UIViewController, UITableViewDelegate , UITableViewDa
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
         if segue.identifier == "Viewsnapseque"{
-        
         let nextVC = segue.destination as! ViewSnapViewController
         nextVC.snap = sender as! Snap
         }
-     
     }
     
     @IBAction func logoutTapped(_ sender: Any) {

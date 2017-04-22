@@ -386,7 +386,7 @@
 				DEVELOPMENT_TEAM = KA8AA2Y3J8;
 				INFOPLIST_FILE = SnapChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.SnapChat;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-SnapChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -400,7 +400,7 @@
 				DEVELOPMENT_TEAM = KA8AA2Y3J8;
 				INFOPLIST_FILE = SnapChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.SnapChat;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-SnapChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
