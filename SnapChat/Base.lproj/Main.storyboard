@@ -91,18 +91,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wbi-47-oXo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypt-6f-yO7">
                                 <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wbi-47-oXo" firstAttribute="centerX" secondItem="cKX-vs-pl9" secondAttribute="centerX" id="0nP-kC-ExV"/>
-                            <constraint firstItem="alz-vt-iSY" firstAttribute="top" secondItem="Wbi-47-oXo" secondAttribute="bottom" id="HDh-1i-pXn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wbi-47-oXo" secondAttribute="trailing" id="Jtw-o2-8Vy"/>
-                            <constraint firstItem="Wbi-47-oXo" firstAttribute="leading" secondItem="cKX-vs-pl9" secondAttribute="leadingMargin" id="TuT-lm-BCN"/>
-                            <constraint firstItem="Wbi-47-oXo" firstAttribute="top" secondItem="xqn-4K-SEV" secondAttribute="bottom" id="ynY-OJ-PHO"/>
+                            <constraint firstItem="ypt-6f-yO7" firstAttribute="centerX" secondItem="cKX-vs-pl9" secondAttribute="centerX" id="0Bg-CZ-cfK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ypt-6f-yO7" secondAttribute="trailing" id="7Fu-Jy-RvP"/>
+                            <constraint firstItem="ypt-6f-yO7" firstAttribute="top" secondItem="xqn-4K-SEV" secondAttribute="bottom" id="Ds4-ta-qj0"/>
+                            <constraint firstItem="ypt-6f-yO7" firstAttribute="leading" secondItem="cKX-vs-pl9" secondAttribute="leadingMargin" id="HC5-kq-be6"/>
+                            <constraint firstItem="alz-vt-iSY" firstAttribute="top" secondItem="ypt-6f-yO7" secondAttribute="bottom" id="Mzu-uV-JCo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uAJ-S2-Cpw">
@@ -117,6 +117,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ypt-6f-yO7" id="PaW-Ef-LaE"/>
+                        <segue destination="nhY-gn-8zU" kind="show" identifier="Viewsnapseque" id="8Vd-NR-uS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZl-cq-MzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,6 +222,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRs-48-Xe4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3390" y="92"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="RL9-RX-JVG">
+            <objects>
+                <viewController id="nhY-gn-8zU" customClass="ViewSnapViewController" customModule="SnapChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xuC-wf-qHr"/>
+                        <viewControllerLayoutGuide type="bottom" id="02y-Xo-uc5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GGV-6A-3sF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is me saying hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoW-hY-4NP">
+                                <rect key="frame" x="21" y="626" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGz-fs-iTe">
+                                <rect key="frame" x="26" y="30" width="323" height="586"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="02y-Xo-uc5" firstAttribute="top" secondItem="RoW-hY-4NP" secondAttribute="bottom" constant="20" id="7FX-Gx-ZA4"/>
+                            <constraint firstItem="OGz-fs-iTe" firstAttribute="centerX" secondItem="GGV-6A-3sF" secondAttribute="centerX" id="PPG-zw-KbI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OGz-fs-iTe" secondAttribute="trailing" constant="10" id="SLm-gg-Cgt"/>
+                            <constraint firstItem="OGz-fs-iTe" firstAttribute="top" secondItem="xuC-wf-qHr" secondAttribute="bottom" constant="10" id="WCU-1e-lLC"/>
+                            <constraint firstItem="RoW-hY-4NP" firstAttribute="top" secondItem="OGz-fs-iTe" secondAttribute="bottom" constant="10" id="Zh7-xU-ESY"/>
+                            <constraint firstItem="RoW-hY-4NP" firstAttribute="leading" secondItem="GGV-6A-3sF" secondAttribute="leadingMargin" constant="5" id="bVz-Yi-Uz4"/>
+                            <constraint firstItem="OGz-fs-iTe" firstAttribute="leading" secondItem="GGV-6A-3sF" secondAttribute="leadingMargin" constant="10" id="c3n-uc-0Ht"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RoW-hY-4NP" secondAttribute="trailing" constant="5" id="gsG-bd-ALN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="OGz-fs-iTe" id="YJW-d2-CVc"/>
+                        <outlet property="lable" destination="RoW-hY-4NP" id="zl9-Tq-u3i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gad-aM-MvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="810"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DRG-68-B1z">
